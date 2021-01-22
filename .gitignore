@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Logs
 logs
 *.log
@@ -19,6 +21,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+/coverage
 coverage
 *.lcov
 
@@ -40,6 +43,11 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+/node_modules
+/.pnp
+.pnp.js
+
+# Logs
 
 # TypeScript v1 declaration files
 typings/
@@ -69,6 +77,10 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env
 .env.test
 
@@ -77,6 +89,8 @@ typings/
 
 # Next.js build output
 .next
+/.next/
+/out/
 
 # Nuxt.js build / generate output
 .nuxt
@@ -102,3 +116,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Vercel
+.vercel
+
+# Misc
+.DS_Store
+*.pem
+
+# Production
+/build
