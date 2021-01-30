@@ -49,6 +49,10 @@
 }
 
 .element .account {
+  border: 1px solid #eaeaea;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
+    rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,8 +63,11 @@
   pointer-events: auto;
 }
 
-.element .account:hover {
-  border: 1px solid blue;
+.element .account:hover,
+.element .account:focus,
+.element .account:active {
+  color: #0070f3;
+  border-color: #0070f3;
 }
 
 .card {
@@ -72,6 +79,7 @@
   font-weight: 500;
   border-radius: 12px;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 .card:hover,
