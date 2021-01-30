@@ -5,3 +5,5 @@ export enum ChainId {
   GÖRLI = 5,
   KOVAN = 42,
 }
+
+export const NETWORK_CONTEXT = "NETWORK";
