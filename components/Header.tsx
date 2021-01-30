@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Text } from "rebass";
 import { ChainId } from "../common/constants";
+import { useActiveWeb3React } from "../hooks";
 import styles from "../styles/Header.module.css";
 import Row from "./Row";
 import Card from "./Card";
@@ -11,7 +12,11 @@ const SUPPORTED_TESTNETS: { [chainId in ChainId]?: string } = {
 };
 
 export default function Header() {
-  let chainId, account, userEthBalance;
+  //   const { account, chainId } = useActiveWeb3React();
+
+  const chainId = "42";
+  const account = 1;
+  const userEthBalance = 1;
   return (
     <div className={styles.container}>
       <Row>
@@ -33,7 +38,8 @@ export default function Header() {
           <div className={styles.account}>
             {account && userEthBalance ? (
               <Text className={styles.text}>
-                {/* {userEthBalance?.toSignificant(4)} ETH */}
+                {/* {userEthBalance?.toSignificant(4)} */}
+                {userEthBalance} ETH
               </Text>
             ) : null}
           </div>
