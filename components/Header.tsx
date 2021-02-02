@@ -12,10 +12,7 @@ const SUPPORTED_TESTNETS: { [chainId in ChainId]?: string } = {
 };
 
 export default function Header() {
-  //   const { account, chainId } = useActiveWeb3React();
-
-  const chainId = "42";
-  const account = 1;
+  const { account, chainId } = useActiveWeb3React();
   const userEthBalance = 1;
   return (
     <div className={styles.container}>
